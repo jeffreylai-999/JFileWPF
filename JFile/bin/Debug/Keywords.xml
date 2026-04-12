@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfKeyword xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Keyword>
+    <Key>SELECT </Key>
+    <ConvertTo>SELECT </ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>FROM </Key>
+    <ConvertTo>FROM </ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>WHERE </Key>
+    <ConvertTo>WHERE </ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key> AND </Key>
+    <ConvertTo> AND </ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>DECLARE </Key>
+    <ConvertTo>DECLARE </ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>JOIN </Key>
+    <ConvertTo>JOIN </ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>UNION </Key>
+    <ConvertTo>UNION </ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key> OUTER </Key>
+    <ConvertTo> OUTER </ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>CHAR</Key>
+    <ConvertTo>CHAR</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>NCHAR</Key>
+    <ConvertTo>NCHAR</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>VARCHAR</Key>
+    <ConvertTo>VARCHAR</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>NVARCHAR</Key>
+    <ConvertTo>NVARCHAR</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>DECIMAL</Key>
+    <ConvertTo>DECIMAL</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>FLOAT</Key>
+    <ConvertTo>FLOAT</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>NUMERIC</Key>
+    <ConvertTo>NUMERIC</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>DATETIME</Key>
+    <ConvertTo>DATETIME</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key> OUTPUT</Key>
+    <ConvertTo> OUTPUT</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key> EXISTS</Key>
+    <ConvertTo> EXISTS</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>LEFT</Key>
+    <ConvertTo>LEFT</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>RIGHT</Key>
+    <ConvertTo>RIGHT</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>LTRIM</Key>
+    <ConvertTo>LTRIM</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>RTRIM</Key>
+    <ConvertTo>RTRIM</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>TRIM</Key>
+    <ConvertTo>TRIM</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>CASE </Key>
+    <ConvertTo>CASE </ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>WHEN </Key>
+    <ConvertTo>WHEN </ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key> BEGIN</Key>
+    <ConvertTo> BEGIN</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key> END</Key>
+    <ConvertTo> END</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>LIKE </Key>
+    <ConvertTo>LIKE </ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>NOT </Key>
+    <ConvertTo>NOT </ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key> INTO </Key>
+    <ConvertTo> INTO </ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>BEGIN TRAN</Key>
+    <ConvertTo>BEGIN TRAN</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>TRANSACTION</Key>
+    <ConvertTo>TRANSACTION</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>CONVERT</Key>
+    <ConvertTo>CONVERT</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>TRY_CONVERT</Key>
+    <ConvertTo>TRY_CONVERT</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>CAST</Key>
+    <ConvertTo>CAST</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>TRY_CAST</Key>
+    <ConvertTo>TRY_CAST</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>ISNULL</Key>
+    <ConvertTo>ISNULL</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key> NULL</Key>
+    <ConvertTo> NULL</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>ORDER BY </Key>
+    <ConvertTo>ORDER BY </ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>GROUP BY </Key>
+    <ConvertTo>GROUP BY </ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>OPEN </Key>
+    <ConvertTo>OPEN </ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>FETCH NEXT FROM </Key>
+    <ConvertTo>FETCH NEXT FROM </ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>SET </Key>
+    <ConvertTo>SET </ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>CLOSE </Key>
+    <ConvertTo>CLOSE </ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>DEALLOCATE </Key>
+    <ConvertTo>DEALLOCATE </ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>GOTO </Key>
+    <ConvertTo>GOTO </ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>ROLLBACK</Key>
+    <ConvertTo>ROLLBACK</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>COMMIT </Key>
+    <ConvertTo>COMMIT </ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>SUBSTRING</Key>
+    <ConvertTo>SUBSTRING</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key> GETDATE</Key>
+    <ConvertTo>GETDATE</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>DATEADD</Key>
+    <ConvertTo>DATEADD</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>DATEPART</Key>
+    <ConvertTo>DATEPART</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>CURSOR </Key>
+    <ConvertTo>CURSOR </ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>LOCAL </Key>
+    <ConvertTo>LOCAL </ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>FAST_FORWARD READ_ONLY FOR</Key>
+    <ConvertTo>FAST_FORWARD READ_ONLY FOR</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key> WITH</Key>
+    <ConvertTo> WITH</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>NOLOCK</Key>
+    <ConvertTo>NOLOCK</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>ROWLOCK</Key>
+    <ConvertTo>ROWLOCK</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>IF </Key>
+    <ConvertTo>IF </ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key> IN </Key>
+    <ConvertTo> IN </ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>UPDATE </Key>
+    <ConvertTo>UPDATE </ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>ELSE</Key>
+    <ConvertTo>ELSE</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key> OR </Key>
+    <ConvertTo> OR </ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>WHILE </Key>
+    <ConvertTo>WHILE </ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>EXEC </Key>
+    <ConvertTo>EXEC </ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>EXECUTE </Key>
+    <ConvertTo>EXECUTE </ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>INSERT INTO</Key>
+    <ConvertTo>INSERT INTO</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>CREATE </Key>
+    <ConvertTo>CREATE </ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key> INT</Key>
+    <ConvertTo> INT</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key> INTER</Key>
+    <ConvertTo> inter</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key> UPPER</Key>
+    <ConvertTo> UPPER</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key> LOWER</Key>
+    <ConvertTo> LOWER</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>SPACE</Key>
+    <ConvertTo>SPACE</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key> THEN</Key>
+    <ConvertTo> THEN</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key> DISTINCT</Key>
+    <ConvertTo> DISTINCT</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key> VALUES</Key>
+    <ConvertTo> VALUES</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>REPLACE</Key>
+    <ConvertTo>REPLACE</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>REPLICATE</Key>
+    <ConvertTo>REPLICATE</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key> ON</Key>
+    <ConvertTo> ON</ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>DELETE </Key>
+    <ConvertTo>DELETE </ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>DROP </Key>
+    <ConvertTo>DROP </ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>PROC </Key>
+    <ConvertTo>PROC </ConvertTo>
+  </Keyword>
+  <Keyword>
+    <Key>PROCEDURE </Key>
+    <ConvertTo>PROCEDURE </ConvertTo>
+  </Keyword>
+</ArrayOfKeyword>

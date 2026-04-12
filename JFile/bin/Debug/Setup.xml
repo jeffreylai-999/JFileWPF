@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSetup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Setup>
+    <Trim>true</Trim>
+    <ConvertTabToSpace>true</ConvertTabToSpace>
+    <Space>3</Space>
+    <ConvertKeywordToUppercase>false</ConvertKeywordToUppercase>
+    <Override>false</Override>
+  </Setup>
+</ArrayOfSetup>
