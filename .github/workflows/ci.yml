@@ -1,0 +1,102 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  codeql:
+    name: CodeQL Analysis
+    runs-on: windows-latest
+    permissions:
+      security-events: write
+      actions: read
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: csharp
+          queries: security-extended
+
+      - name: Build for CodeQL tracing
+        run: dotnet build JFileWPF.sln -c Release
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3
+        with:
+          category: "/language:csharp"
+
+  test:
+    name: Build & Test
+    needs: codeql
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Restore
+        run: dotnet restore JFileWPF.sln
+
+      - name: Build
+        run: dotnet build JFileWPF.sln -c Release --no-restore
+
+      - name: Test
+        run: dotnet test src/JFileWPF.Tests/ -c Release --no-build --logger "trx;LogFileName=results.trx"
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results
+          path: src/JFileWPF.Tests/TestResults/results.trx
+
+  publish:
+    name: Publish Package
+    needs: test
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Publish
+        run: >
+          dotnet publish src/JFileWPF/JFileWPF.csproj
+          -c Release
+          -r win-x64
+          --self-contained false
+          -p:DebugType=none
+          -p:DebugSymbols=false
+          -o ./publish
+
+      - name: Zip artifact
+        run: Compress-Archive -Path ./publish/* -DestinationPath ./JFileWPF-win-x64.zip
+        shell: pwsh
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: JFileWPF-win-x64
+          path: ./JFileWPF-win-x64.zip
+          if-no-files-found: error
