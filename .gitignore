@@ -13,6 +13,9 @@ publish/
 # VS Code
 #.vscode/
 
+# Claude Code local settings (developer-specific)
+.claude/settings.local.json
+
 # NuGet
 *.nupkg
 *.snupkg
