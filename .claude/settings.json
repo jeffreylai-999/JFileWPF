@@ -6,7 +6,8 @@
       "Bash(dotnet test:*)",
       "Bash(dotnet clean:*)",
       "Bash(gh api:*)",
-      "Bash(gh pr:*)"
+      "Bash(gh pr:*)",
+      "Bash(gh release:*)"
     ]
   }
 }
