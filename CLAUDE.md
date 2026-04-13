@@ -76,7 +76,7 @@ When a file is selected, transformations are applied in this order:
 - `SettingWindow` uses `[GeneratedRegex]` for numeric input validation; `FileProcessingService` uses `[GeneratedRegex]` for the comment splitter — both classes must be declared `partial`
 - `Keyword.CreateDefaults()` is the single source of truth for the default keyword list; called both in `Select_Click` (silent seed) and `KeywordList_Click` (seed then open in Notepad)
 - Material Design v5 is bootstrapped via `BundledTheme` in `App.xaml` (theme: Light, Primary=Blue, Secondary=Indigo); use `ElevationAssist.Elevation` not the removed `ShadowAssist.ShadowDepth`
-- The title bar uses a custom `TitleBarButton` style (defined in `MainWindow.xaml` `Window.Resources`) — a plain `ControlTemplate` with `#33FFFFFF` hover and `#55FFFFFF` pressed states; the Settings button uses `Button` + `Button.ContextMenu`, not `PopupBox`
+- The title bar uses a custom `TitleBarButton` style (defined in `App.xaml` `Application.Resources`, shared by both windows) — a plain `ControlTemplate` with `#33FFFFFF` hover and `#55FFFFFF` pressed states; the Settings button uses `Button` + `Button.ContextMenu`, not `PopupBox`
 - File content is fully read into memory — not suitable for very large files
 
 ## Testing Conventions
@@ -96,3 +96,22 @@ Examples:
 - `ProcessText_NullKeywords_SkipsConversion`
 
 Use `[Theory]` + `[InlineData]` to collapse multiple cases that share the same method, scenario type, and assertion shape into a single test. Keep `[Fact]` for cases that require multiline strings or complex setup that cannot be expressed as inline literals.
+
+## Workflow Conventions
+
+### Git & GitHub
+
+- **Never add Claude as a co-author** in commit messages.
+- Prefer `gh` (GitHub CLI) for all GitHub operations (PRs, comments, reviews). Fall back to `git` only when no `gh` command covers the task.
+
+### PR Reviews
+
+When asked to review a PR:
+
+1. Fetch **only unresolved comments** — skip anything already resolved.
+2. For each unresolved comment, state whether it needs fixing and why.
+3. **Wait for user confirmation** on which suggestions to apply before making any changes.
+4. After applying the confirmed fixes:
+   - Commit and push the changes.
+   - Post a PR comment listing what was fixed and why each dismissed comment was not actioned.
+   - Resolve each conversation thread via `gh api`.
