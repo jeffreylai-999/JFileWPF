@@ -26,14 +26,14 @@ jobs:
         run: dotnet build JFileWPF.sln -c Release --no-restore
 
       - name: Test
-        run: dotnet test src/JFileWPF.Tests/ -c Release --no-build --logger "trx;LogFileName=results.trx"
+        run: dotnet test src/JFileWPF.Tests/ -c Release --no-build --logger trx --results-directory ./TestResults
 
       - name: Upload test results
         uses: actions/upload-artifact@v4
         if: always()
         with:
           name: test-results
-          path: src/JFileWPF.Tests/TestResults/results.trx
+          path: ./TestResults/*.trx
 
   publish:
     name: Publish Package
