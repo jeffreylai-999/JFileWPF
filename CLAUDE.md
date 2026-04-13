@@ -113,5 +113,5 @@ When asked to review a PR:
 3. **Wait for user confirmation** on which suggestions to apply before making any changes.
 4. After applying the confirmed fixes:
    - Commit and push the changes.
-   - Post a PR comment listing what was fixed and why each dismissed comment was not actioned.
+   - Reply **directly to each unresolved comment thread**, state what was fixed or why the suggestion was not applied.
    - Resolve each conversation thread via `gh api`.
