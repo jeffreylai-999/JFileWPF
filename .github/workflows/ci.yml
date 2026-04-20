@@ -43,6 +43,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
 
       - name: Setup .NET 10
         uses: actions/setup-dotnet@v5
@@ -59,13 +61,20 @@ jobs:
           -p:DebugSymbols=false
           -o ./publish
 
-      - name: Zip artifact
-        run: Compress-Archive -Path ./publish/* -DestinationPath ./JFileWPF-win-x64.zip
+      - name: Read version
+        id: version
         shell: pwsh
+        run: |
+          $version = (Get-Item ./publish/JFileWPF.dll).VersionInfo.ProductVersion -replace '\+.*',''
+          echo "version=$version" >> $env:GITHUB_OUTPUT
+
+      - name: Zip artifact
+        shell: pwsh
+        run: Compress-Archive -Path ./publish/* -DestinationPath ./JFileWPF-${{ steps.version.outputs.version }}-win-x64.zip
 
       - name: Upload artifact
         uses: actions/upload-artifact@v7
         with:
-          name: JFileWPF-win-x64
-          path: ./JFileWPF-win-x64.zip
+          name: JFileWPF-${{ steps.version.outputs.version }}-win-x64
+          path: ./JFileWPF-${{ steps.version.outputs.version }}-win-x64.zip
           if-no-files-found: error

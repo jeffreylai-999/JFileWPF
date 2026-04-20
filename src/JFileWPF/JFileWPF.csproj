@@ -11,14 +11,13 @@
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Version>2.0.0.0</Version>
-    <AssemblyVersion>2.0.0.0</AssemblyVersion>
-    <FileVersion>2.0.0.0</FileVersion>
-    <Copyright>Copyright 2019</Copyright>
+    <MinVerTagPrefix>v</MinVerTagPrefix>
+    <MinVerDefaultPreReleaseIdentifiers>alpha.0</MinVerDefaultPreReleaseIdentifiers>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="MaterialDesignThemes" Version="5.3.0" />
+    <PackageReference Include="MinVer" Version="5.0.0" PrivateAssets="all" />
   </ItemGroup>
 
   <ItemGroup>

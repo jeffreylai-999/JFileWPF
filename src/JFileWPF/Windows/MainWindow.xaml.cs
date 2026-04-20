@@ -2,6 +2,7 @@ using com.jl.jfilewpf.Models;
 using com.jl.jfilewpf.Services;
 using Microsoft.Win32;
 using System.IO;
+using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
@@ -18,8 +19,14 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
+        VersionText.Text = $"v{GetVersion()}";
         InitLayout();
     }
+
+    private static string GetVersion() =>
+        Assembly.GetExecutingAssembly()
+            .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
+            ?.InformationalVersion?.Split('+')[0] ?? "dev";
 
     private void InitLayout()
     {
